@@ -31,3 +31,36 @@ const store = Redux.createStore(
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 console.log("store", store)
+
+// utils
+function getCounter() {
+	const state = store.getState()
+	return state.counter
+}
+
+function setCounter(value) {
+	store.dispatch({
+		type: "counter/set",
+		payload: value
+	})
+}
+
+function decrementCounter() {
+	store.dispatch({
+		type: "counter/decrement"
+	})
+}
+
+function incrementCounter() {
+	store.dispatch({
+		type: "counter/increment"
+	})
+}
+
+export {
+	store,
+	getCounter,
+	setCounter,
+	decrementCounter,
+	incrementCounter
+}
