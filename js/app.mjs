@@ -25,3 +25,10 @@ btnDecrementCounter.addEventListener("click", () => {
 btnIncrementCounter.addEventListener("click", () => {
 	incrementCounter()
 })
+
+store.subscribe(render)
+
+function render() {
+	const counter = getCounter()
+	resultElement.textContent = counter.toString()
+}
