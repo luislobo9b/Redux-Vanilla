@@ -25,3 +25,9 @@ function counterReducer(state = initialState, action) {
 
 	return state
 }
+
+const store = Redux.createStore(
+	counterReducer,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
+console.log("store", store)
