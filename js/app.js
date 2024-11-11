@@ -1,4 +1,9 @@
-import { store, getCounter, setCounter, decrementCounter, incrementCounter } from "./store/store.js"
+import store from "./store/store.js"
+import createCounterActions from "./store/slices/counter/counterActions.js"
+
+console.log("store", store)
+
+const { getCounter, setCounter, decrementCounter, incrementCounter } = createCounterActions(store)
 
 const btnGetCounter = document.querySelector("#getCounter"),
 	btnSetCounter = document.querySelector("#setCounter"),
