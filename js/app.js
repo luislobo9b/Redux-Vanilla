@@ -1,4 +1,4 @@
-import { store, getCounter, setCounter, decrementCounter, incrementCounter } from "./store.mjs"
+import { store, getCounter, setCounter, decrementCounter, incrementCounter } from "./store/store.js"
 
 const btnGetCounter = document.querySelector("#getCounter"),
 	btnSetCounter = document.querySelector("#setCounter"),
